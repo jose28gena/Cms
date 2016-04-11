@@ -1,0 +1,102 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Basic -->
+    <title>Inicio</title>
+
+    <!-- Define Charset -->
+    <meta charset="utf-8">
+
+    <!-- Responsive Metatag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Page Description and Author -->
+    <meta name="description" content="">
+    <meta name="author" content="Soluciones Instantáneas">
+
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="~/assets/css/bootstrap.css" type="text/css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css" type="text/css">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="~/assets/css/owl.theme.css" type="text/css">
+    <link rel="stylesheet" href="~/assets/css/owl.transitions.css" type="text/css">
+
+    <!-- Light Box CSS -->
+    <link rel="stylesheet" href="~/assets/css/lightbox.css" type="text/css">
+
+    <!-- Construction CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+
+    <!-- Default Color -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/colors/light-red.css">
+
+  
+    @*<link rel="stylesheet" type="text/css" href="~/assets/css/colors/black.css" title="black">*@
+
+    <!-- Responsive CSS Style -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css">
+
+    <!-- Css3 Transitions Styles  -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/animate.css">
+
+
+    <!-- Construction JS File -->
+    <script src="~/assets/js/jquery-2.1.1.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/modernizr.custom.js"></script>
+    <script src="~/assets/js/owl.carousel.min.js"></script>
+    <script src="~/assets/js/lightbox.min.js"></script>
+    <script src="~/assets/js/jquery.appear.js"></script>
+    <script src="~/assets/js/jquery.fitvids.js"></script>
+    <script src="~/assets/js/jquery.nicescroll.min.js"></script>
+    <script src="~/assets/js/superfish.min.js"></script>
+    <script src="~/assets/js/supersubs.js"></script>
+    <script src="~/assets/js/styleswitcher.js"></script>
+    <script src="~/assets/js/script.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        @Html.Partial("~/Views/Shared/Header.cshtml")
+        @Html.Partial("~/Views/Shared/Navigation.cshtml")
+        @Html.Partial("~/Views/Shared/MainSlider.cshtml")
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                @RenderBody()
+            </div>
+        </div>
+
+        <!-- Start Copyright Section -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright-section">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="copy">&copy; Copyright 2015 || All Rights Reserved</div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="">Desarrollado por <a target="_blank" href="http://solucionesinstantaneas.com/">Soluciones Instantáneas</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Section -->
+    </div>
+</body>
+</html>
