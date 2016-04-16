@@ -20,7 +20,7 @@ namespace Model.BussinesLogic
         private int? idEmpresa;
         public CategoriaLogic()
         {
-
+ 
             rm = new ResponseModel();
             repo = new Repository<Categoria>();
             idEmpresa = 1;
