@@ -36,5 +36,7 @@ namespace Model.Entities
         public int idEmpresa { get; set; }
 
         public virtual Empresa Empresa { get; set; }
+
+        public virtual Usuario Usuario { get; set; }
     }
 }

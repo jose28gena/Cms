@@ -4,7 +4,8 @@ namespace Model.Entities
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-
+    using Common;
+    using Repository.Interfaces;
     public partial class CmsContext : DbContext
     {
         public CmsContext()
@@ -18,7 +19,6 @@ namespace Model.Entities
         public virtual DbSet<Empresa> Empresa { get; set; }
         public virtual DbSet<SubCategoria> SubCategoria { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Categoria>()
@@ -161,6 +161,49 @@ namespace Model.Entities
             modelBuilder.Entity<Usuario>()
                 .Property(e => e.Foto)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Usuario>()
+                .HasMany(e => e.Contenido)
+                .WithRequired(e => e.Usuario)
+                .HasForeignKey(e => e.CreadoPor)
+                .WillCascadeOnDelete(false);
+        }
+        public override int SaveChanges()
+        {
+            Auditar();
+            return base.SaveChanges();
+        }
+
+        public void Auditar()
+        {
+            var modifiedEntries = ChangeTracker.Entries().Where(
+                x => x.Entity is IAuditable && (x.State == System.Data.Entity.EntityState.Added
+                     || x.State == System.Data.Entity.EntityState.Modified));
+
+            foreach (var entry in modifiedEntries)
+            {
+                IAuditable entity = entry.Entity as IAuditable;
+                if (entity != null)
+                {
+                    var fecha = DateTime.Now;
+                    var usuario = SessionHelper.GetUser();
+
+                    if (entry.State == EntityState.Added)
+                    {
+                        entity.CreadoFecha = fecha;
+                        entity.CreadoPor = usuario;
+                    }
+                    else
+                    {
+                        base.Entry(entity).Property(x => x.CreadoFecha).IsModified = false;
+                        base.Entry(entity).Property(x => x.CreadoPor).IsModified = false;
+                    }
+
+                    entity.ActualizadoFecha = fecha;
+                    entity.ActualizadoPor = usuario;
+                }
+            }
         }
     }
+
 }
