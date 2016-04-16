@@ -17,7 +17,7 @@ namespace Model.BussinesLogic
         private Repository<Categoria> repo;
         private Categoria categoria = new Categoria();
 
-        private int? idEmpresa;
+        private int? idEmpresa=1;
         public CategoriaLogic()
         {
  
@@ -53,7 +53,7 @@ namespace Model.BussinesLogic
         {
             using (var db = repo.ContextScope(new CmsContext()))
             {
-                return repo.GetAll().ToList();
+                return repo.GetAll(x=> x.idEmpresa==idEmpresa).ToList();
             }
         }
 

@@ -2,6 +2,7 @@
 using Common;
 using Model.BussinesLogic;
 using Model.Entities;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Cms.Areas.Admin.Controllers
@@ -37,17 +38,17 @@ namespace Cms.Areas.Admin.Controllers
         }
 
    
-        public JsonResult Guardar(Contenido model)
+        public JsonResult Guardar(Contenido model,HttpPostedFileBase Foto)
         {
             var rm = new ResponseModel();
 
             if (ModelState.IsValid)
             {
-            rm = contenidologic.Guardar(model);
+            rm = contenidologic.Guardar(model,Foto);
 
                 if (rm.response)
                 {
-                    rm.href = Url.Content("~/admin/categoria/?Tipo=" + model.idCategoria);
+                    rm.href = Url.Content("~/admin/categoria/?idcategoria=" + model.idCategoria);
                    
                 }
             }

@@ -33,7 +33,7 @@ namespace Cms.Areas.Admin.Filters
             {
                 filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
                 {
-                    controller = "Usuario",
+                    controller = "Contenido",
                     action = "Index"
                 }));
             }

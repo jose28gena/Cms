@@ -5,7 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Core;
+using System.IO;
 using System.Linq;
+using System.Web;
 
 namespace Model.BussinesLogic
 {
@@ -15,6 +17,7 @@ namespace Model.BussinesLogic
         private ResponseModel rm;
         private Repository<Contenido> repo;
         private Contenido contenido = new Contenido();
+        private CategoriaLogic categorialogic = new CategoriaLogic();
         int? idEmpresa;
         public ContenidoLogic()
         {
@@ -118,13 +121,31 @@ namespace Model.BussinesLogic
             return grid.responde();
         }
 
-        public ResponseModel Guardar(Contenido contenido)
+        public ResponseModel Guardar(Contenido model, HttpPostedFileBase Foto)
         {
             using (repo.ContextScope(new CmsContext()))
             {
-                if (contenido.idContenido == 0) repo.Insert(contenido);
-                else repo.Update(contenido);
+                // Campos que queremos ignorar
+                if (Foto != null)
+                {
+                    // Nombre del archivo, es decir, lo renombramos para que no se repita nunca
+                    string archivo =  Path.GetFileName(Foto.FileName);
 
+                    // La ruta donde lo vamos guardar
+                    Foto.SaveAs(HttpContext.Current.Server.MapPath("~/uploads/"+ categorialogic.Obtener( model.idCategoria).Titulo+"/"+ archivo));
+
+                    // Establecemos en nuestro modelo el nombre del archivo
+                   contenido.Imagen = archivo;
+
+                    repo.Insert(contenido);
+                }
+                else
+                {
+                    repo.PartialUpdate(model, x=> x.Titulo, x => x.Link, x => x.Descripcion);
+                }
+
+
+        
                 repo.Save();
 
                 rm.SetResponse(true);
