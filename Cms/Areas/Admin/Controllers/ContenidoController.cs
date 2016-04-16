@@ -15,10 +15,11 @@ namespace Cms.Areas.Admin.Controllers
         private Contenido contenido = new Contenido();
        
         [Autenticado]
-        public ActionResult Index(int Tipo = 1)
+        public ActionResult Index(int? idcontenido = 0,int? idcategoria=0)
         {
-            ViewBag.Tipo = Tipo;
-            ViewBag.Title = CategoriaLogic.Obtener(Tipo).Titulo;
+            ViewBag.idcontenido = idcontenido;
+            ViewBag.idcategoria = idcategoria;
+            ViewBag.Title = CategoriaLogic.Obtener(idcontenido).Titulo;
             return View();
         }
 

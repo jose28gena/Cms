@@ -1,12 +1,13 @@
 ﻿@{
-    int tipo = ViewBag.tipo;
+    int idcategoria = ViewBag.idcategoria;
+    int idcontenido = ViewBag.idcontenido;
 }
 
 
 <div id="experiencia" class="page">
 
     <h1 class="page-header remove-margin" >
-         <a class="btn btn-primary pull-right" href="~/admin/Contenido/Agregar?tipo=@tipo">Agregar</a>
+         <a class="btn btn-primary pull-right" href="~/admin/Contenido/Agregar?idcategoria=@idcategoria&idcontenido=@idcontenido">Agregar</a>
     @ViewBag.Title
     </h1>
 
@@ -29,7 +30,7 @@
                 {
                     propiedad: 'Titulo', formato: function (tr, obj, valor) {
                         return anexGrid_link({
-                            href: '@Url.Content("~/admin/contenido/Agregar/")' + obj.idContenido,
+                            href: '@Url.Content("~/admin/contenido/Agregar/idcontenido=")' + obj.idContenido +'&idcategoria='@idcategoria,
                             contenido: valor
                         });
                     }
@@ -40,14 +41,14 @@
                 {
                     propiedad: 'Titulo', formato: function (tr, obj, valor) {
                         return anexGrid_link({
-                            href: '@Url.Content("~/admin/contenido/eliminar/")' + obj.idContenido,
+                            href: '@Url.Content("~/admin/contenido/eliminar/idcontenido=")' + obj.idContenido,
                             contenido: '<i class="fa fa-trash"></i>',
                             class: 'btn btn-danger btn-xs btn-block btn-eliminar',
                         });
                     }
                 },
             ],
-            url: '@Url.Content("~/admin/contenido/listar/?Tipo=")+ @tipo' ,
+            url: '@Url.Content("~/admin/contenido/listar/?idcategoria=")+ @idcategoria' ,
             paginable: true,
             filtrable: true,
             limite: [20, 60, 100],      
