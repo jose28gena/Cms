@@ -55,15 +55,17 @@
     <Compile Include="BussinesLogic\ContenidoLogic.cs" />
     <Compile Include="BussinesLogic\EmpresaLogic.cs" />
     <Compile Include="BussinesLogic\UsuarioLogic.cs" />
-    <Compile Include="Entities\CategoriaRol.cs" />
     <Compile Include="Entities\Categoria.cs" />
-    <Compile Include="CmsContext.cs" />
+    <Compile Include="Entities\CategoriaRol.cs" />
+    <Compile Include="Entities\CmsContext.cs" />
     <Compile Include="Entities\Contenido.cs" />
     <Compile Include="Entities\Empresa.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\SubCategoria.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

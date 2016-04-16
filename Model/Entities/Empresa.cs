@@ -1,6 +1,5 @@
 namespace Model.Entities
 {
-    using Entities;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -33,28 +32,43 @@ namespace Model.Entities
         [StringLength(100)]
         public string Mision { get; set; }
 
+        [StringLength(10)]
+        public string NumeroCalle { get; set; }
+
         [StringLength(150)]
-        public string Direccion { get; set; }
-
-        public int? Telefono { get; set; }
-
-        public int? Celular { get; set; }
+        public string Calle { get; set; }
 
         [StringLength(50)]
+        public string Colonia { get; set; }
+
+        [StringLength(50)]
+        public string Pais { get; set; }
+
+        [StringLength(100)]
+        public string Coordenadas { get; set; }
+
+        [StringLength(50)]
+        public string Telefono { get; set; }
+
+        [StringLength(50)]
+        public string Celular { get; set; }
+
+        [StringLength(100)]
+        public string Correo { get; set; }
+
+        [StringLength(100)]
         public string Facebook { get; set; }
 
-        [StringLength(50)]
-        public string Twittwer { get; set; }
+        [StringLength(100)]
+        public string Twitter { get; set; }
 
-        public string Ubicacion { get; set; }
+        public DateTime CreadoFecha { get; set; }
 
-        public DateTime? CreadoFecha { get; set; }
+        public int CreadoPor { get; set; }
 
-        public int? CreadorPor { get; set; }
+        public int ActualizadoPor { get; set; }
 
-        public int? ActualizadoPor { get; set; }
-
-        public DateTime? ActualizadoFecha { get; set; }
+        public DateTime ActualizadoFecha { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Categoria> Categoria { get; set; }
@@ -64,7 +78,5 @@ namespace Model.Entities
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuario> Usuario { get; set; }
-
-
     }
 }

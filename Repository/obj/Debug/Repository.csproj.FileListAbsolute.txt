@@ -1,0 +1,27 @@
+D:\Mi Trabajo\Tutoriales\asp.net-mvc\ASP.NET-MVC-Arquitectura-y-tips\Repository\bin\Debug\Repository.dll.config
+D:\Mi Trabajo\Tutoriales\asp.net-mvc\ASP.NET-MVC-Arquitectura-y-tips\Repository\bin\Debug\Repository.dll
+D:\Mi Trabajo\Tutoriales\asp.net-mvc\ASP.NET-MVC-Arquitectura-y-tips\Repository\bin\Debug\Repository.pdb
+D:\Mi Trabajo\Tutoriales\asp.net-mvc\ASP.NET-MVC-Arquitectura-y-tips\Repository\bin\Debug\EntityFramework.dll
+D:\Mi Trabajo\Tutoriales\asp.net-mvc\ASP.NET-MVC-Arquitectura-y-tips\Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Mi Trabajo\Tutoriales\asp.net-mvc\ASP.NET-MVC-Arquitectura-y-tips\Repository\bin\Debug\EntityFramework.xml
+D:\Mi Trabajo\Tutoriales\asp.net-mvc\ASP.NET-MVC-Arquitectura-y-tips\Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Mi Trabajo\Tutoriales\asp.net-mvc\ASP.NET-MVC-Arquitectura-y-tips\Repository\obj\Debug\Repository.dll
+D:\Mi Trabajo\Tutoriales\asp.net-mvc\ASP.NET-MVC-Arquitectura-y-tips\Repository\obj\Debug\Repository.pdb
+C:\Users\JoseGenaro\Downloads\ASP.NET-MVC-Arquitectura-y-tips-master\Repository\bin\Debug\Repository.dll.config
+C:\Users\JoseGenaro\Downloads\ASP.NET-MVC-Arquitectura-y-tips-master\Repository\bin\Debug\Repository.dll
+C:\Users\JoseGenaro\Downloads\ASP.NET-MVC-Arquitectura-y-tips-master\Repository\bin\Debug\Repository.pdb
+C:\Users\JoseGenaro\Downloads\ASP.NET-MVC-Arquitectura-y-tips-master\Repository\bin\Debug\EntityFramework.dll
+C:\Users\JoseGenaro\Downloads\ASP.NET-MVC-Arquitectura-y-tips-master\Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\JoseGenaro\Downloads\ASP.NET-MVC-Arquitectura-y-tips-master\Repository\bin\Debug\EntityFramework.xml
+C:\Users\JoseGenaro\Downloads\ASP.NET-MVC-Arquitectura-y-tips-master\Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\JoseGenaro\Downloads\ASP.NET-MVC-Arquitectura-y-tips-master\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+C:\Users\JoseGenaro\Downloads\ASP.NET-MVC-Arquitectura-y-tips-master\Repository\obj\Debug\Repository.dll
+C:\Users\JoseGenaro\Downloads\ASP.NET-MVC-Arquitectura-y-tips-master\Repository\obj\Debug\Repository.pdb
+C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\bin\Debug\Repository.dll
+C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\bin\Debug\Repository.pdb
+C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\bin\Debug\EntityFramework.dll
+C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\bin\Debug\EntityFramework.xml
+C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\obj\Debug\Repository.dll
+C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\obj\Debug\Repository.pdb

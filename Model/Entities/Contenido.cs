@@ -1,8 +1,11 @@
 namespace Model.Entities
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
     [Table("Contenido")]
     public partial class Contenido
     {
@@ -15,28 +18,23 @@ namespace Model.Entities
         public string Descripcion { get; set; }
 
         [StringLength(100)]
-        public string Url { get; set; }
+        public string Link { get; set; }
 
         [StringLength(100)]
         public string Imagen { get; set; }
 
-        public int? idCategoria { get; set; }
+        public int idCategoria { get; set; }
 
-        public DateTime? CreadoFecha { get; set; }
+        public DateTime CreadoFecha { get; set; }
 
-        public int? CreadoPor { get; set; }
+        public int CreadoPor { get; set; }
 
-        public int? ActualizadoPor { get; set; }
+        public int ActualizadoPor { get; set; }
 
-        public DateTime? ActualizadoFecha { get; set; }
+        public DateTime ActualizadoFecha { get; set; }
 
-        public int? idEmpresa { get; set; }
-
-        public virtual Categoria Categoria { get; set; }
+        public int idEmpresa { get; set; }
 
         public virtual Empresa Empresa { get; set; }
-
-        public virtual Usuario Usuario { get; set; }
-
     }
 }
