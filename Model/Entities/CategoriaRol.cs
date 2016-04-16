@@ -13,6 +13,7 @@ namespace Model.Entities
         public CategoriaRol()
         {
             Categoria = new HashSet<Categoria>();
+            
         }
 
         [Key]

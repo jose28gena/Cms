@@ -13,6 +13,7 @@ namespace Model.Entities
         public Categoria()
         {
             SubCategoria = new HashSet<SubCategoria>();
+            idEmpresa = 1;
         }
 
         [Key]

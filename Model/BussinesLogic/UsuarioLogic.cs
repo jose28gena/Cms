@@ -16,6 +16,7 @@ namespace Model.BussinesLogic
         {
             rm = new ResponseModel();
             repo = new Repository<Usuario>();
+            
         }
 
         public ResponseModel Acceder(string Email, string Password)

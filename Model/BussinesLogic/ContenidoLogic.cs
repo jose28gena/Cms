@@ -21,7 +21,7 @@ namespace Model.BussinesLogic
 
             rm = new ResponseModel();
             repo = new Repository<Contenido>();
-            idEmpresa = new UsuarioLogic().Obtener(SessionHelper.GetUser()).idEmpresa;
+            idEmpresa =1;
         }
 
         public List<Contenido> Listar()
@@ -34,7 +34,7 @@ namespace Model.BussinesLogic
             }
         }
 
-        public AnexGRIDResponde Listar(AnexGRID grid, int Tipo)
+        public AnexGRIDResponde Listar(AnexGRID grid, int idCategoria)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Model.BussinesLogic
 
 
                     var query = ctx.Contenido.Include("Usuario")
-                        .Where(x => x.idEmpresa == idEmpresa && x.idCategoria == Tipo);
+                        .Where(x => x.idEmpresa == idEmpresa && x.idCategoria == idCategoria);
 
 
                     // Ordenamiento
@@ -156,7 +156,7 @@ namespace Model.BussinesLogic
             return rm;
         }
 
-        public Contenido Obtener(int id)
+        public Contenido Obtener(int? id)
         {
             try
             {

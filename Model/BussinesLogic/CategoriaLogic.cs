@@ -23,7 +23,7 @@ namespace Model.BussinesLogic
 
             rm = new ResponseModel();
             repo = new Repository<Categoria>();
-            idEmpresa = new UsuarioLogic().Obtener(SessionHelper.GetUser()).idEmpresa;
+            idEmpresa = 1;
         }
 
 

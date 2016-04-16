@@ -15,7 +15,7 @@ namespace Cms.Areas.Admin.Controllers
         private Contenido contenido = new Contenido();
        
         [Autenticado]
-        public ActionResult Index(int? idcontenido = 0,int? idcategoria=0)
+        public ActionResult Index(int? idcontenido = 1,int? idcategoria=0)
         {
             ViewBag.idcontenido = idcontenido;
             ViewBag.idcategoria = idcategoria;
@@ -23,17 +23,17 @@ namespace Cms.Areas.Admin.Controllers
             return View();
         }
 
-        public JsonResult Listar(AnexGRID grid,int Tipo=1)
+        public JsonResult Listar(AnexGRID grid,int idcategoria=1)
         {
             //return Json(contenido.Listar(grid, SessionHelper.GetUser()));
-          return Json(contenidologic.Listar(grid, Tipo
+          return Json(contenidologic.Listar(grid, idcategoria
               ));
         }
 
 
-        public JsonResult Eliminar(int id)
+        public JsonResult Eliminar(int idcontenido)
         {
-            return Json(contenidologic.Eliminar(id));
+            return Json(contenidologic.Eliminar(idcontenido));
         }
 
    
@@ -57,16 +57,12 @@ namespace Cms.Areas.Admin.Controllers
 
 
         [Autenticado]
-        public ActionResult Agregar(int id=0)
+        public ActionResult Agregar(int? idcontenido=0)
         {
+            //PREGUNTAR SI idCategoria es igual a cero, si es responder badrequest
 
-            if (id == 0)
-            {
-              return Redirect("~/admin/Contenido");
-
-              
-            }
-            else contenido = contenidologic.Obtener(id);
+          
+             contenido =idcontenido==0? new Contenido(): contenidologic.Obtener(idcontenido);
 
             return View(contenido);
         }
