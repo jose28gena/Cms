@@ -27,11 +27,11 @@
         [StringLength(150)]
         public string Imagen { get; set; }
 
-        [StringLength(100)]
+
         [Display(Name = "Visión")]
         public string Vision { get; set; }
 
-        [StringLength(100)]
+       
         [Display(Name = "Misión")]
         public string Mision { get; set; }
         [Display(Name = "#Domicilio")]
@@ -46,6 +46,12 @@
 
         [StringLength(50)]
         public string Pais { get; set; }
+
+        [StringLength(80)]
+        public string Ciudad { get; set; }
+
+        [StringLength(80)]
+        public string Estado { get; set; }
 
         [StringLength(100)]
         public string Coordenadas { get; set; }
@@ -66,13 +72,15 @@
         [EmailAddress(ErrorMessage = "EL e-mail es invalido.")]
         [StringLength(100)]
         public string Correo { get; set; }
-
+        [Url]
         [StringLength(100)]
         public string Facebook { get; set; }
         [Url]
         [StringLength(100)]
         public string Twitter { get; set; }
-
+        [Url]
+        [StringLength(100)]
+        public string LinkedIn { get; set; }
         public DateTime CreadoFecha { get; set; }
 
         public int CreadoPor { get; set; }

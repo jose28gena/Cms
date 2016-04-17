@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using Model.Entities;
 using Common;
 using Model.BussinesLogic;
+using Cms.Areas.Admin.Filters;
 
 namespace Cms.Areas.Admin.Controllers
 {
@@ -23,6 +24,7 @@ namespace Cms.Areas.Admin.Controllers
         }
 
         // GET: Admin/Empresa/Edit/5
+        [Autenticado]
         public ActionResult Edit(int? id)
         {
             if (id == null)

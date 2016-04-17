@@ -1,4 +1,4 @@
-﻿        
+﻿@model Model.Entities.Empresa
 @{
     Layout = null;
 }
@@ -79,10 +79,18 @@
     <script src="~/Scripts/script.js"></script>
 </head>
 <body>
+    <!-- Start Loader -->
+    <div id="loader">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+    <!-- End Loader -->
     <div class="container">
         @Html.Partial("~/Views/Shared/Header.cshtml")
         @Html.Partial("~/Views/Shared/Navigation.cshtml")
-        @Html.Partial("~/Views/Shared/MainSlider.cshtml")
+        @Html.Partial("~/Views/Shared/MainSlider.cshtml", Model.Contenido.Where(x => x.idCategoria == 8))
 
 
         <div class="row">
@@ -90,6 +98,8 @@
                 @RenderBody()
             </div>
         </div>
+
+        @Html.Partial("~/Views/Shared/Footer.cshtml",Model)
 
         <!-- Start Copyright Section -->
         <div class="row">

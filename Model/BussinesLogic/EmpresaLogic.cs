@@ -65,6 +65,29 @@ namespace Model.BussinesLogic
                 return rm;
             }
         }
+
+
+        public Empresa Obtener(int? idEmpresa)
+        {
+            try
+            {
+                using (repo.ContextScope(new CmsContext()))
+                {
+                    return repo.Get( 
+                        x => x.idEmpresa == idEmpresa, x=> x.Categoria,x=> x.Contenido
+
+                    );
+                }
+            }
+            catch (Exception e)
+            {
+
+
+                throw;
+            }
+
+
+        }
     }
 
 

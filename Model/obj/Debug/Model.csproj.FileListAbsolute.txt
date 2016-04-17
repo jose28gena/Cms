@@ -25,3 +25,16 @@ C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Model\bin\Debug\En
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Model\obj\Debug\Model.dll
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Model\obj\Debug\Model.pdb
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\Model.dll
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\Model.pdb
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\Common.dll
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\EntityFramework.dll
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\Repository.dll
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\Common.pdb
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\Repository.pdb
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\EntityFramework.xml
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\JoseGenaro\Desktop\Cms\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\JoseGenaro\Desktop\Cms\Model\obj\Debug\Model.dll
+C:\Users\JoseGenaro\Desktop\Cms\Model\obj\Debug\Model.pdb

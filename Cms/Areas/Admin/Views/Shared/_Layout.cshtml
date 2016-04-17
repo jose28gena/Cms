@@ -15,8 +15,10 @@
 
     <link href="~/Areas/Admin/Assets/css/admin-style.css" rel="stylesheet" />
     <link href="~/Areas/Admin/Assets/css/bootstrap.theme.min.css" rel="stylesheet" />
-    <link href="~/Areas/Admin/Assets/js/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet" />
-    <script src="~/Areas/Admin/assets/js/jquery.js"></script>
+
+    <link href="~/Scripts/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet" />
+    @*<script src="~/Areas/Admin/Scripts/jquery.js"></script>*@
+    <script src="~/Scripts/jquery-2.2.3.min.js"></script>
 
 </head>
 <body>
@@ -34,40 +36,40 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-                       Cms Soluciones Instantáneas  V 1.0.0
+                        Cms Soluciones Instantáneas  V 1.0.0
                     </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-            
-                   <div class="collapse navbar-collapse" id="menu">
+
+                <div class="collapse navbar-collapse" id="menu">
                     <ul class="nav navbar-nav">
                         @{
-                            var categorias = new Model.BussinesLogic.CategoriaLogic().ObtenerPor(-1).OrderBy( x => x.Orden);
-                            foreach (var e in categorias )
+                            var categorias = new Model.BussinesLogic.CategoriaLogic().ObtenerPor(-1).OrderBy(x => x.Orden);
+                            foreach (var e in categorias)
                             {
-                              <li>
-                                <a href="~/admin/contenido/index/?idcategoria=@e.idCategoria&idcontenido=0">@e.Titulo</a>
-                            </li>
+                                <li>
+                                    <a href="~/admin/contenido/index/?idcategoria=@e.idCategoria&idcontenido=0">@e.Titulo</a>
+                                </li>
                             }
                         }
                         @*<li>
-                            <a href="~/admin/Categoria?Tipo=1">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="~/admin/Categoria?Tipo=2">Noticias</a>
-                        </li>
-                            <li>
-                            <a href="~/admin/Categoria?Tipo=3">Videos</a>
-                       </li>
-                        <li>
-                            <a href="~/admin/Categoria?Tipo=4">Galeria</a>
-                        </li>
-                        <li>
-                            <a href="~/admin/Categoria?Tipo=5">Clientes</a>
-                        </li>*@
+                                 <a href="~/admin/Categoria?Tipo=1">Inicio</a>
+                             </li>
+                             <li>
+                                 <a href="~/admin/Categoria?Tipo=2">Noticias</a>
+                             </li>
+                                 <li>
+                                 <a href="~/admin/Categoria?Tipo=3">Videos</a>
+                            </li>
+                             <li>
+                                 <a href="~/admin/Categoria?Tipo=4">Galeria</a>
+                             </li>
+                             <li>
+                                 <a href="~/admin/Categoria?Tipo=5">Clientes</a>
+                             </li>*@
                     </ul>
-                
+
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -87,14 +89,14 @@
                             </ul>
                         </li>
                     </ul>
-               
-                 </div><!-- /.navbar-collapse -->
-          
-            
-              </div>
+
+                </div><!-- /.navbar-collapse -->
+
+
+            </div>
             <!-- /.container-fluid -->
         </nav>
-    }
+                            }
 
     <div class="container">
         <div class="row">
@@ -107,15 +109,26 @@
             <div class="">Desarrollado por <a target="_blank" href="http://solucionesinstantaneas.com/">Soluciones Instantáneas</a></div>
         </div>
     </div>
-    <script src="~/Areas/Admin/Assets/js/bootstrap.min.js"></script>
-    <script src="~/Areas/Admin/Assets/js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
-    <script src="~/Areas/Admin/Assets/js/jquery.form.js"></script>
 
-    <script src="~/Areas/Admin/Assets/js/ini.js"></script>
+    @*<script src="~/Areas/Admin/Scripts/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/ini.js"></script>
+    <script src="~/Areas/Admin/Scripts/jquery.anexgrid.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/jquery.form.js"></script>
 
-    <script src="~/Areas/Admin/Assets/js/jquery.anexgrid.min.js"></script>
-    <script src="~/Areas/Admin/Assets/js/jquery.validate.min.js"></script>
-    <script src="~/Areas/Admin/Assets/js/jquery.validate.unobtrusive.min.js"></script>
-   
+    <script src="~/Areas/Admin/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/jquery.validate.unobtrusive.min.js"></script>*@
+
+    <script src="~/Scripts/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/ini.js"></script>
+    <script src="~/Scripts/jquery.anexgrid.min.js"></script>
+    <script src="~/Scripts/jquery.form.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
 </body>
+
+
 </html>
+

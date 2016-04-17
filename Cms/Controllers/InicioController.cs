@@ -1,17 +1,18 @@
 ﻿using Cms.Areas.Admin.Filters;
 using Common;
+using Model.BussinesLogic;
 using System.Web.Mvc;
 
 namespace Cms.Controllers
 {
     public class InicioController : Controller
     {
-      //  private UsuarioLogic usuario = new UsuarioLogic();
+      private EmpresaLogic empresalogic = new EmpresaLogic();
 
     
         public ActionResult Index()
         {
-            return View();
+            return View(empresalogic.Obtener(1));
         }
 
         //public JsonResult Acceder(string Email, string Password)
