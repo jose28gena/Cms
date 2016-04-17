@@ -17,8 +17,9 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
 @{i = 0; }
-                 @foreach (var item in Model)
+                 @foreach (var item in Model) 
                  {
+
                     <div class='@(i == 0 ? "item active" : "item")'>
                         <img src="~/Uploads/Slider/@item.Imagen" class="img-responsive" alt="Slider images @i" style="width:1098px;height:499px;">
                         <div class="carousel-caption">
