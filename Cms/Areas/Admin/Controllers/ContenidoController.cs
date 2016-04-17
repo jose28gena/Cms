@@ -16,11 +16,11 @@ namespace Cms.Areas.Admin.Controllers
         private Contenido contenido = new Contenido();
        
         [Autenticado]
-        public ActionResult Index(int? idcontenido = 1,int? idcategoria=0)
+        public ActionResult Index(int? idcontenido = 1,int? idcategoria=7)
         {
             ViewBag.idcontenido = idcontenido;
             ViewBag.idcategoria = idcategoria;
-            ViewBag.Title = CategoriaLogic.Obtener(idcontenido).Titulo;
+           ViewBag.Title = CategoriaLogic.Obtener(idcategoria).Titulo;
             return View();
         }
 
@@ -58,13 +58,20 @@ namespace Cms.Areas.Admin.Controllers
 
 
         [Autenticado]
-        public ActionResult Agregar(int? idcontenido=0)
+        public ActionResult Agregar(int idcategoria,int idcontenido=0)
         {
             //PREGUNTAR SI idCategoria es igual a cero, si es responder badrequest
 
-          
-             contenido =idcontenido==0? new Contenido(): contenidologic.Obtener(idcontenido);
-
+            if (idcontenido == 0) {
+                contenido = new Contenido();
+                contenido.idCategoria = idcategoria;
+                contenido.idContenido = idcontenido;
+                ViewBag.Title = "Nuevo contenido";
+                    }
+            else {
+                ViewBag.Title = CategoriaLogic.Obtener(idcategoria).Titulo;
+                contenido = contenidologic.Obtener(idcontenido);
+            }
             return View(contenido);
         }
     }

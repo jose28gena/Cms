@@ -53,7 +53,7 @@ namespace Model.BussinesLogic
         {
             using (var db = repo.ContextScope(new CmsContext()))
             {
-                return repo.GetAll(x=> x.idEmpresa==idEmpresa).ToList();
+                return repo.GetAll().ToList();
             }
         }
 

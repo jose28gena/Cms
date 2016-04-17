@@ -132,7 +132,7 @@ namespace Model.BussinesLogic
                     string archivo =  Path.GetFileName(Foto.FileName);
 
                     // La ruta donde lo vamos guardar
-                    Foto.SaveAs(HttpContext.Current.Server.MapPath("~/uploads/"+ categorialogic.Obtener( model.idCategoria).Titulo+"/"+ archivo));
+                    Foto.SaveAs(HttpContext.Current.Server.MapPath("~/Uploads/"+ categorialogic.Obtener( model.idCategoria).Titulo+"/"+ archivo));
 
                     // Establecemos en nuestro modelo el nombre del archivo
                    contenido.Imagen = archivo;
@@ -177,14 +177,14 @@ namespace Model.BussinesLogic
             return rm;
         }
 
-        public Contenido Obtener(int? id)
+        public Contenido Obtener(int? idContenido)
         {
             try
             {
                 using (repo.ContextScope(new CmsContext()))
                 {
                     return repo.Get(
-                        x => x.idEmpresa == id
+                        x => x.idContenido == idContenido
 
                     );
                 }
