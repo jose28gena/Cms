@@ -126,22 +126,32 @@ namespace Model.BussinesLogic
             using (repo.ContextScope(new CmsContext()))
             {
                 // Campos que queremos ignorar
+               
                 if (Foto != null)
                 {
                     // Nombre del archivo, es decir, lo renombramos para que no se repita nunca
                     string archivo =  Path.GetFileName(Foto.FileName);
-
+                  
+                    if(model.Imagen!= null)
+                    {
+                        File.Delete(HttpContext.Current.Server.MapPath("~/Uploads/" + categorialogic.Obtener(model.idCategoria).Titulo + "/" + model.Imagen    ));
+                    }
                     // La ruta donde lo vamos guardar
                     Foto.SaveAs(HttpContext.Current.Server.MapPath("~/Uploads/"+ categorialogic.Obtener( model.idCategoria).Titulo+"/"+ archivo));
 
                     // Establecemos en nuestro modelo el nombre del archivo
-                   contenido.Imagen = archivo;
+                   model.Imagen = archivo;
 
-                    repo.Insert(contenido);
+                     
+                }
+
+                if (model.idContenido == 0)
+                {
+                    repo.Insert(model);
                 }
                 else
                 {
-                    repo.PartialUpdate(model, x=> x.Titulo, x => x.Link, x => x.Descripcion);
+                    repo.Update(model);
                 }
 
 

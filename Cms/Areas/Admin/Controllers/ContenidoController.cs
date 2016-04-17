@@ -16,7 +16,7 @@ namespace Cms.Areas.Admin.Controllers
         private Contenido contenido = new Contenido();
        
         [Autenticado]
-        public ActionResult Index(int? idcontenido = 1,int? idcategoria=7)
+        public ActionResult Index(int? idcontenido=0,int? idcategoria=7)
         {
             ViewBag.idcontenido = idcontenido;
             ViewBag.idcategoria = idcategoria;
@@ -24,7 +24,7 @@ namespace Cms.Areas.Admin.Controllers
             return View();
         }
 
-        public JsonResult Listar(AnexGRID grid,int idcategoria=1)
+        public JsonResult Listar(AnexGRID grid,int idcategoria)
         {
             //return Json(contenido.Listar(grid, SessionHelper.GetUser()));
           return Json(contenidologic.Listar(grid, idcategoria
@@ -44,11 +44,12 @@ namespace Cms.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
+
             rm = contenidologic.Guardar(model,Foto);
 
                 if (rm.response)
                 {
-                    rm.href = Url.Content("~/admin/categoria/?idcategoria=" + model.idCategoria);
+                    rm.href = Url.Content("~/admin/contenido/?idcategoria=" + model.idCategoria);
                    
                 }
             }
@@ -66,12 +67,13 @@ namespace Cms.Areas.Admin.Controllers
                 contenido = new Contenido();
                 contenido.idCategoria = idcategoria;
                 contenido.idContenido = idcontenido;
-                ViewBag.Title = "Nuevo contenido";
+           
                     }
             else {
-                ViewBag.Title = CategoriaLogic.Obtener(idcategoria).Titulo;
+              
                 contenido = contenidologic.Obtener(idcontenido);
             }
+            ViewBag.Title = CategoriaLogic.Obtener(idcategoria).Titulo;
             return View(contenido);
         }
     }

@@ -1,5 +1,6 @@
 namespace Model.Entities
 {
+    using Repository.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -7,7 +8,7 @@ namespace Model.Entities
     using System.Data.Entity.Spatial;
 
     [Table("Contenido")]
-    public partial class Contenido
+    public partial class Contenido:IAuditable
     {
         [Key]
         public int idContenido { get; set; }
@@ -38,5 +39,11 @@ namespace Model.Entities
         public virtual Empresa Empresa { get; set; }
 
         public virtual Usuario Usuario { get; set; }
+
+
+        public  Contenido()
+        {
+            idEmpresa = 1;
+        }
     }
 }
