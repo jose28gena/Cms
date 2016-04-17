@@ -288,11 +288,7 @@
     <Content Include="Areas\Admin\Views\Contenido\Agregar.cshtml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Areas\Admin\Views\Empresa\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Empresa\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\Empresa\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Empresa\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Empresa\Index.cshtml" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\classie.js" />
     <Content Include="Scripts\elastic_grid.js" />

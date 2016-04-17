@@ -25,12 +25,3 @@ C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\bin\Deb
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\obj\Debug\Repository.dll
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Repository\obj\Debug\Repository.pdb
-C:\Users\JoseGenaro\Desktop\Cms\Repository\bin\Debug\Repository.dll
-C:\Users\JoseGenaro\Desktop\Cms\Repository\bin\Debug\Repository.pdb
-C:\Users\JoseGenaro\Desktop\Cms\Repository\bin\Debug\EntityFramework.dll
-C:\Users\JoseGenaro\Desktop\Cms\Repository\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\JoseGenaro\Desktop\Cms\Repository\bin\Debug\EntityFramework.xml
-C:\Users\JoseGenaro\Desktop\Cms\Repository\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\JoseGenaro\Desktop\Cms\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
-C:\Users\JoseGenaro\Desktop\Cms\Repository\obj\Debug\Repository.dll
-C:\Users\JoseGenaro\Desktop\Cms\Repository\obj\Debug\Repository.pdb

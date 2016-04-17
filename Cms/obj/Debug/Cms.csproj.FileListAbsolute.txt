@@ -99,38 +99,3 @@ C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Cms\bin\es\System.
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Cms\obj\Debug\Cms.csprojResolveAssemblyReference.cache
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Cms\obj\Debug\Cms.dll
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Cms\obj\Debug\Cms.pdb
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\Cms.dll.config
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\Cms.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\Cms.pdb
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\Common.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\EntityFramework.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\EntityFramework.SqlServer.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\Model.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\Repository.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Helpers.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Mvc.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Razor.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Webpages.Deployment.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Webpages.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Webpages.Razor.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\Common.pdb
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\Model.pdb
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\Repository.pdb
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\EntityFramework.xml
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\EntityFramework.SqlServer.xml
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Razor.xml
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Webpages.xml
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Webpages.Deployment.xml
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Webpages.Razor.xml
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Helpers.xml
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\System.Web.Mvc.xml
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\es\System.Web.Razor.resources.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\es\System.Web.Webpages.resources.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\es\System.Web.Webpages.Deployment.resources.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\es\System.Web.Webpages.Razor.resources.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\es\System.Web.Helpers.resources.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\bin\es\System.Web.Mvc.resources.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\obj\Debug\Cms.csprojResolveAssemblyReference.cache
-C:\Users\JoseGenaro\Desktop\Cms\Cms\obj\Debug\Cms.dll
-C:\Users\JoseGenaro\Desktop\Cms\Cms\obj\Debug\Cms.pdb

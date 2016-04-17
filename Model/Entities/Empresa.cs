@@ -28,9 +28,11 @@
         public string Imagen { get; set; }
 
         [StringLength(100)]
+        [Display(Name = "Visión")]
         public string Vision { get; set; }
 
         [StringLength(100)]
+        [Display(Name = "Misión")]
         public string Mision { get; set; }
         [Display(Name = "#Domicilio")]
         [StringLength(10)]

@@ -18,8 +18,3 @@ C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Common\bin\Debug\C
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Common\obj\Debug\Common.dll
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Common\obj\Debug\Common.pdb
 C:\Users\JoseGenaro\Documents\Visual Studio 2015\Projects\Cms\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
-C:\Users\JoseGenaro\Desktop\Cms\Common\bin\Debug\Common.dll
-C:\Users\JoseGenaro\Desktop\Cms\Common\bin\Debug\Common.pdb
-C:\Users\JoseGenaro\Desktop\Cms\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
-C:\Users\JoseGenaro\Desktop\Cms\Common\obj\Debug\Common.dll
-C:\Users\JoseGenaro\Desktop\Cms\Common\obj\Debug\Common.pdb
