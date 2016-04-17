@@ -288,6 +288,11 @@
     <Content Include="Areas\Admin\Views\Contenido\Agregar.cshtml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\Empresa\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Empresa\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Empresa\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Empresa\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Empresa\Index.cshtml" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\classie.js" />
     <Content Include="Scripts\elastic_grid.js" />
@@ -476,6 +481,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\ContenidoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EmpresaController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsuarioController.cs" />
     <Compile Include="Areas\Admin\Filters\AdminFilters.cs" />
