@@ -6,7 +6,7 @@
 
 <h2>Edit</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Guardar","Empresa", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
     @Html.HiddenFor(x => x.Imagen)
@@ -139,14 +139,14 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Guardar" class="btn btn-default" data-ajax="true" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Regresar", "Index")
 </div>
 
 <script>

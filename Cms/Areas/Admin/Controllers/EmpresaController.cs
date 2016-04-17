@@ -7,13 +7,15 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Model.Entities;
+using Common;
+using Model.BussinesLogic;
 
 namespace Cms.Areas.Admin.Controllers
 {
     public class EmpresaController : Controller
     {
         private CmsContext db = new CmsContext();
-
+        private EmpresaLogic empresalogic = new EmpresaLogic();
         // GET: Admin/Empresa
         public ActionResult Index()
         {
@@ -76,18 +78,27 @@ namespace Cms.Areas.Admin.Controllers
         // POST: Admin/Empresa/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idEmpresa,Nombre,Imagen,Vision,Mision,NumeroCalle,Calle,Colonia,Pais,Coordenadas,Telefono,Celular,Correo,Facebook,Twitter,CreadoFecha,CreadoPor,ActualizadoPor,ActualizadoFecha")] Empresa empresa)
+   
+      
+        public JsonResult Guardar(Empresa model, HttpPostedFileBase Foto)
         {
+            var rm = new ResponseModel();
+
             if (ModelState.IsValid)
             {
-                db.Entry(empresa).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+
+                rm = empresalogic.Guardar(model, Foto);
+
+                if (rm.response)
+                {
+                    rm.href = Url.Content("~/admin/contenido/");
+
+                }
             }
-            return View(empresa);
+
+            return Json(rm);
         }
+
 
         // GET: Admin/Empresa/Delete/5
         public ActionResult Delete(int? id)
