@@ -1,8 +1,11 @@
-﻿
+﻿@model Model.Entities.Empresa
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@Html.Partial("~/Views/Shared/Sobrenosotros.cshtml", Model)
+
+@Html.Partial("~/Views/Shared/NoticiasTestimonios.cshtml", Model.Contenido.Where(x => x.idCategoria == 3))
 
 
+@Html.Partial("~/Views/Shared/Clientes.cshtml", Model.Contenido.Where(x => x.idCategoria == 5))

@@ -41,6 +41,9 @@
         [StringLength(150)]
         public string Calle { get; set; }
 
+        [Display(Name ="¿Quienes Somos?")]
+        public string SobreNosotros { get; set; }
+
         [StringLength(50)]
         public string Colonia { get; set; }
 

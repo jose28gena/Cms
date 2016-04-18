@@ -1,17 +1,18 @@
-﻿<!-- Start About Us Section -->
+﻿@model Model.Entities.Empresa
+<!-- Start About Us Section -->
 <div class="row">
     <div class="col-md-5">
         <div class="home-about-us">
-            <h3 class="section-title">About Us</h3>
-            <img src="images/about.jpg" class="img-responsive" alt="">
-            <p>Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident praesentium voluptatum deleniti atque corrupti quos non provident.</p>
-            <ul>
+            <h3 class="section-title">¿Quienes somos?</h3>
+            <img src="~/Uploads/@Model.Imagen" class="img-responsive" alt="">
+            <p>@Model.SobreNosotros</p>
+            @*<ul>
                 <li><i class="fa fa-check-square-o"></i>At vero eos et accusamus et iusto odio</li>
                 <li><i class="fa fa-check-square-o"></i>Nam libero tempore cum soluta nobis est</li>
                 <li><i class="fa fa-check-square-o"></i>Temporibus autem quibusdam et aut officiis </li>
                 <li><i class="fa fa-check-square-o"></i>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</li>
-            </ul>
-            <a href="#" class="btn btn-primary">Read More</a>
+            </ul>*@
+            <a href="#" class="btn btn-primary">Leer más...</a>
         </div>
     </div>
     <div class="col-md-7">

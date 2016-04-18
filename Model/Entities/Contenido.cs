@@ -17,7 +17,7 @@ namespace Model.Entities
         public string Titulo { get; set; }
 
         public string Descripcion { get; set; }
-
+        [Url]
         [StringLength(100)]
         public string Link { get; set; }
 

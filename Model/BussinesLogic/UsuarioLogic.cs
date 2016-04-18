@@ -21,7 +21,7 @@ namespace Model.BussinesLogic
 
         public ResponseModel Acceder(string Email, string Password)
         {
-            var rm = new ResponseModel();
+          
 
             try
             {

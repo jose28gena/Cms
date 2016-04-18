@@ -41,7 +41,7 @@ namespace Model.Entities
         [Required]
         [StringLength(100)]
         public string Foto { get; set; }
-
+        #region AUDITORIA
         public DateTime CreadoFecha { get; set; }
 
         public int CreadoPor { get; set; }
@@ -49,7 +49,7 @@ namespace Model.Entities
         public int ActualizadoPor { get; set; }
 
         public DateTime ActualizadoFecha { get; set; }
-
+#endregion
         public int idEmpresa { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
