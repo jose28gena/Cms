@@ -521,6 +521,11 @@
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Shared\Servicios.cshtml" />
+    <Content Include="Views\Shared\Sobrenosotros.cshtml" />
+    <Content Include="Views\Shared\EquipoTrabajo.cshtml" />
+    <Content Include="Views\Shared\Clientes.cshtml" />
+    <Content Include="Views\Shared\NoticiasTestimonios.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

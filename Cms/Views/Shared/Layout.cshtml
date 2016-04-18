@@ -88,7 +88,7 @@
     </div>
     <!-- End Loader -->
     <div class="container">
-        @Html.Partial("~/Views/Shared/Header.cshtml")
+        @Html.Partial("~/Views/Shared/Header.cshtml",Model)
         @Html.Partial("~/Views/Shared/Navigation.cshtml")
         @Html.Partial("~/Views/Shared/MainSlider.cshtml", Model.Contenido.Where(x => x.idCategoria == 8))
 
