@@ -1,4 +1,6 @@
-﻿    <!-- Start Latest News & Testimonial Section -->
+﻿@model IEnumerable<Model.Entities.Contenido> 
+
+   <!-- Start Latest News & Testimonial Section -->
 <div class="row">
 
     <!-- Start Latest News Section -->
@@ -6,7 +8,8 @@
         <div class="latest-news">
             <h3 class="section-title">Latest News</h3>
             <div id="latest-news">
-
+@foreach (var intem in Model)
+{ 
                 <div class="latest-post">
                     <img src="images/post-1.jpg" class="img-responsive" alt="">
                     <h4><a href="#">Nemo enim ipsam voluptatem quia volup</a></h4>
@@ -19,7 +22,7 @@
                     <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
                     <a href="#" class="btn btn-primary">Read More</a>
                 </div>
-
+}
                 <div class="latest-post">
                     <img src="images/post-2.jpg" class="img-responsive" alt="">
                     <h4><a href="#">Sed ut perspiciatis unde omnis iste</a></h4>
