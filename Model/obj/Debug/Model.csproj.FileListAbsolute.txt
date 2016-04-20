@@ -38,3 +38,5 @@ C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\JoseGenaro\Desktop\Cms\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 C:\Users\JoseGenaro\Desktop\Cms\Model\obj\Debug\Model.dll
 C:\Users\JoseGenaro\Desktop\Cms\Model\obj\Debug\Model.pdb
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\Model.dll.CodeAnalysisLog.xml
+C:\Users\JoseGenaro\Desktop\Cms\Model\bin\Debug\Model.dll.lastcodeanalysissucceeded
