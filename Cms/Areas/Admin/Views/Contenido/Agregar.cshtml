@@ -1,127 +1,219 @@
 ﻿@model Model.Entities.Contenido
 
 @{
-
     string nombre = ViewBag.Title;
-
 }
-@* WEFDFFDFDDFDF *@
-@* WEFDFFDFDDFDF *@
-<h2>Agregar</h2>
-@* WEFDFFDFDDFDF *@
-@* WEFDFFDFDDFDF *@
-@using (Html.BeginForm("Guardar", "Contenido", FormMethod.Post))
-{
-    @Html.AntiForgeryToken()
-    @Html.HiddenFor(x => x.idContenido)
-    @Html.HiddenFor(x => x.idCategoria)
-    @Html.HiddenFor(x => x.idEmpresa)
-    @Html.HiddenFor(x => x.Imagen)
-    <div class="form-horizontal">
-        <h4>Contenido</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Titulo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Titulo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Titulo, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Link, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Link, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Link, "", new { @class = "text-danger" })
-            </div>
-        </div>
+@*<h2>Agregar </h2>
 
-        <div class="form-group">
-            <label class="control-label col-md-2">Subir imagen</label>
-            <div class="col-md-10 control-label">
-            
-                <input type="file" id="Foto" name="Foto" onchange="ValidarImagen(this);" />  
-                
-               
+<div class="col-md-12">
+    <div class="panel-heading">
+        Agregar Contenido
+    </div>
+
+    <div class="col-md-8">
+        @using (Html.BeginForm("Guardar", "Contenido", FormMethod.Post))
+        { @Html.AntiForgeryToken()  @Html.HiddenFor(x => x.idContenido)  @Html.HiddenFor(x => x.idCategoria)  @Html.HiddenFor(x => x.idEmpresa)  @Html.HiddenFor(x => x.Imagen)  <div class="form-horizontal">
+            <h4>Contenido</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Titulo, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Titulo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Titulo, "", new { @class = "text-danger" })
+                </div>
             </div>
-         
-        </div>
-        <div  class="form-group">
-            <div id="image-holder" class="col-md-offset-2 col-md-10"> 
-                <img id="preview" src="~/Uploads/@nombre/@Model.Imagen" style="width:300px;height:200px; " />
-                
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Link, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Link, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Link, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Subir imagen</label>
+                <div class="col-md-10 control-label">
+                    <input type="file" id="Foto" name="Foto" onchange="ValidarImagen(this);" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div id="image-holder" class="col-md-offset-2 col-md-10">
+                    <img id="preview" src="~/Uploads/@nombre/@Model.Imagen" style="width:300px;height:200px; " />
+
+                </div>
+            </div>
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <button type="submit" data-ajax="true" class="btn btn-primary">Guardar</button>
                 </div>
             </div>
         </div>
-} 
- 
-
-<div>
-    @Html.ActionLink("Regresar", "Index")
-</div>
-
-
-
-<script>
-function ValidarImagen(obj){
-    var uploadFile = obj.files[0];
-
-    if (!window.FileReader) {
-        alert('El navegador no soporta la lectura de archivos');
-        return;
-    }
-
-    if (!(/\.(jpg|png|gif)$/i).test(uploadFile.name)) {
-        alert('El archivo a adjuntar no es una imagen');
-    }
-    else {
-        var img = new Image();
-        img.onload = function () {
-         
-            var fileSize = uploadFile.size;
-            if (fileSize > (1024 * 1024 * 2)) {
-                alert('No debe que superar los 2Mb');
-                
-            } else {
-
-                img.src = URL.createObjectURL(uploadFile);
-                $("#preview").src = URL.createObjectURL(uploadFile);
-            }
-
-
-        };
-      
-    }
-}
-
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            $('#preview').attr('src', e.target.result);
         }
 
-        reader.readAsDataURL(input.files[0]);
-    }
-}
+        <div>
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    </div>
+</div>*@
 
-$("#Foto").change(function () {
-    readURL(this);
-});
+<div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-md-8" id="p">
+        <div class="panel panel-default" id="i">
+            <div class="panel-heading">
+                <div class="pull-right" id="ant">
+                    <ul class="pager">                       
+                        <li class="previous" onclick="location.href='@Url.Action("Index", "AdminAcceso")'"><a href="#"  class="glyphicon glyphicon-arrow-left"></a></li>                      
+                    </ul>
+                </div>
+                Agregar Contenido
+            </div>
+            <div class="panel-body">
+                @using (Html.BeginForm("Guardar", "Contenido", FormMethod.Post))
+                { @Html.AntiForgeryToken()  @Html.HiddenFor(x => x.idContenido)  @Html.HiddenFor(x => x.idCategoria)  @Html.HiddenFor(x => x.idEmpresa)  @Html.HiddenFor(x => x.Imagen)  <div class="form-horizontal">
+                  
+                    <br/>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Titulo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Titulo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Titulo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
 
-</script>
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Link, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Link, new { htmlAttributes = new { @class = "form-control" ,@id= "link" } })
+                                @Html.ValidationMessageFor(model => model.Link, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            <label class="control-label col-md-2">Subir imagen</label>
+                            <div class="col-md-10 control-label">
+                                <input type="file" id="Foto" name="Foto" onchange="ValidarImagen(this);" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                <div id="image-holder" class="col-md-offset-2 col-md-10">
+                                    <img id="preview" src="~/Uploads/@nombre/@Model.Imagen" style="width:300px;height:200px; " />
+
+                                </div>
+                            </div>
+                        </div>
+                       <div class="col-md-10"></div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <button type="submit" data-ajax="true" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    @*<div>
+                            @Html.ActionLink("Regresar", "Index")
+                        </div>*@
+                </div>
+                }
+            </div>
+            
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        function ValidarImagen(obj) {
+            var uploadFile = obj.files[0];
+
+            if (!window.FileReader) {
+                alert('El navegador no soporta la lectura de archivos');
+                return;
+            }
+
+            if (!(/\.(jpg|png|gif)$/i).test(uploadFile.name)) {
+                alert('El archivo a adjuntar no es una imagen');
+            }
+            else {
+                var img = new Image();
+                img.onload = function () {
+
+                    var fileSize = uploadFile.size;
+                    if (fileSize > (1024 * 1024 * 2)) {
+                        alert('No debe que superar los 2Mb');
+
+                    } else {
+
+                        img.src = URL.createObjectURL(uploadFile);
+                        $("#preview").src = URL.createObjectURL(uploadFile);
+                    }
+
+
+                };
+
+            }
+        }
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#preview').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#Foto").change(function () {
+            readURL(this);
+        });
+
+    </script>

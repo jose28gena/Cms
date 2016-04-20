@@ -95,6 +95,7 @@
     <Content Include="Areas\Admin\assets\css\bootstrap.min.css" />
     <Content Include="Areas\Admin\assets\css\bootstrap.theme.min.css" />
     <Content Include="Areas\Admin\assets\css\font-awesome.min.css" />
+    <Content Include="Areas\Admin\assets\css\Site.css" />
     <Content Include="Areas\Admin\assets\fonts\fontawesome-webfont.svg" />
     <Content Include="Areas\Admin\assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Areas\Admin\assets\images\ajax-loader.gif" />
@@ -128,7 +129,6 @@
     <Content Include="Areas\Admin\Scripts\jquery.js" />
     <Content Include="Areas\Admin\Scripts\jquery.validate.min.js" />
     <Content Include="Areas\Admin\Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="iconos.html" />
     <Content Include="assets\css\animate.css" />
     <Content Include="assets\css\bootstrap-theme.css" />
     <Content Include="assets\css\bootstrap-theme.min.css" />
@@ -474,29 +474,6 @@
     <Content Include="Site\service.html" />
     <Content Include="Site\testimonial.html" />
     <Content Include="Uploads\20160229225307.jpg" />
-    <Content Include="Uploads\Clientes\clients1.png" />
-    <Content Include="Uploads\Clientes\clients2.png" />
-    <Content Include="Uploads\Clientes\clients7.png" />
-    <Content Include="Uploads\Galeria\08A.jpg" />
-    <Content Include="Uploads\Galeria\11905393_889208977794340_7601467486724395734_n.jpg" />
-    <Content Include="Uploads\Galeria\13043286_993738804038391_158790578672706876_n.jpg" />
-    <Content Include="Uploads\Galeria\images.jpg" />
-    <Content Include="Uploads\Galeria\perro_chihuahua_enojado.jpg" />
-    <Content Include="Uploads\Galeria\prueba.jpg" />
-    <Content Include="Uploads\Galeria\tumblr_nukrc6z6Qj1rsxqqio1_1280.jpg" />
-    <Content Include="Uploads\Galeria\tumblr_o56hwoa4ol1siyarzo1_1280.jpg" />
-    <Content Include="Uploads\Galeria\tumblr_o5pacixFqx1ue9j4wo1_500.jpg" />
-    <Content Include="Uploads\Inicio\1959898_10201871590611469_1597128982_n.jpg" />
-    <Content Include="Uploads\Noticias\12216_529429743889448_2550012056259569018_n.jpg" />
-    <Content Include="Uploads\Noticias\13015662_10206313378938629_3154728783249113257_n.jpg" />
-    <Content Include="Uploads\Noticias\6604_1662491544022654_5358347681888029292_n.jpg" />
-    <Content Include="Uploads\Noticias\tumblr_o5ece00zzA1sdss0qo1_500.jpg" />
-    <Content Include="Uploads\Proyectos\12216_529429743889448_2550012056259569018_n.jpg" />
-    <Content Include="Uploads\Proyectos\79379_img-20150814-wa0017.jpg" />
-    <Content Include="Uploads\Slider\12494863_10153657706211429_1352766293706897752_n.jpg" />
-    <Content Include="Uploads\Slider\12936778_1014713905283570_7762674116070554252_n.jpg" />
-    <Content Include="Uploads\Slider\2016-02-08 01.19.34.jpg" />
-    <Content Include="Uploads\Slider\79379_img-20150814-wa0017.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -560,7 +537,13 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Usuario\" />
+    <Folder Include="Uploads\Clientes\" />
+    <Folder Include="Uploads\Galeria\" />
+    <Folder Include="Uploads\Inicio\" />
+    <Folder Include="Uploads\Noticias\" />
+    <Folder Include="Uploads\Proyectos\" />
     <Folder Include="Uploads\Servicios\" />
+    <Folder Include="Uploads\Slider\" />
     <Folder Include="Uploads\Videos\" />
   </ItemGroup>
   <ItemGroup>

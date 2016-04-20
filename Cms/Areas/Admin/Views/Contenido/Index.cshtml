@@ -1,44 +1,85 @@
 ﻿@{
     int idcategoria = ViewBag.idcategoria;
     int idcontenido = ViewBag.idcontenido;
-
 }
 
 
 <div id="agregar" class="page">
 
-    <h1 class="page-header remove-margin" >
-         <a class="btn btn-primary pull-right" href="~/admin/Contenido/Agregar/?idcategoria=@idcategoria&idcontenido=0">Agregar</a>
-        @ViewBag.Title
-    </h1>
+    <div class="row">
+        <div class="col-md-12">
+            <br /><br />
 
-    <div id="list"> </div>
+            <div class="col-md-12">
+                <ul class="nav nav-tabs" >
+                    @{
+                        var categorias = new Model.BussinesLogic.CategoriaLogic().ObtenerPor(-1).OrderBy(x => x.Orden);
+                        foreach (var e in categorias)
+                        {
+                            <li>
+                                <a href="~/admin/contenido/index/?idcategoria=@e.idCategoria&idcontenido=0">@e.Titulo</a>
+                            </li>
+                        }
+                    }
+                </ul>
+                
+
+                <div class="tab-content">
+                    <div class="col-md-10"></div><br />
+                    <a class="btn btn-primary pull-right" href="~/admin/Contenido/Agregar/?idcategoria=@idcategoria&idcontenido=0" id="btnAgregar"><i class="fa fa-plus" aria-hidden="true"> Agregar </i></a>
+                    <div class="col-md-3" id="title">
+                        @ViewBag.Title
+                        
+                    </div> <br /><br />
+                    <div class="DivisorH"></div><br />
+                    <div id="menu1" class="tab-pane fade">
+
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                    </div>  <br /><br />
+                </div>
+
+            </div>
+           
+            <div class="col-md-11">
+                <div id="list"> </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </div>
 
 <script>
     $(document).ready(function () {
         var agrid = $("#list").anexGrid({
-            class: 'table-striped table-bordered table-condensed',
+            class: 'table-striped  table-condensed',
             columnas: [
-              
-                { leyenda: 'Titulo', columna: 'Titulo', ordenable: true, filtro:true },
-                { leyenda: 'Descripcion', columna: 'Descripcion', ordenable: true, filtro: true, style: 'btn-success' },
-                { leyenda: 'Creado Por', columna: 'Usuario.Nombre', ordenable: true, filtro: true },
+
+                { leyenda: 'Titulo', columna: 'Titulo', ordenable: true, filtro: true, class: 'text-center', style: ' background-color: #EBE8E8;' },
+                { leyenda: 'Descripcion', columna: 'Descripcion', ordenable: true, filtro: true, style: 'btn-success', class: 'text-center', style: ' background-color: #EBE8E8;' },
+                { leyenda: 'Creado Por', columna: 'Usuario.Nombre', ordenable: true, filtro: true, class: 'text-center', style: ' background-color: #EBE8E8;' },
                 //{ leyenda: 'Hasta', columna: 'Hasta', ordenable: true },
-                { style: 'width:60px' },
+                { style: 'width:60px', style: ' background-color: #EBE8E8;' },
             ],
             modelo: [
                 {
+                  
                     propiedad: 'Titulo', formato: function (tr, obj, valor) {
                         return anexGrid_link({
                             href: '@Url.Content("~/admin/contenido/Agregar/?idcontenido=")' + obj.idContenido + '&idcategoria=@idcategoria',
-                            contenido: valor
+                            
+                            contenido: valor,
+                            
+                          
                         });
                     }
                 },
                 { propiedad: 'Descripcion' },
+               
                 { propiedad: 'Usuario.Nombre' },
-      
+
                 {
                     propiedad: 'Titulo', formato: function (tr, obj, valor) {
                         return anexGrid_link({
@@ -49,17 +90,16 @@
                     }
                 },
             ],
-            url: '@Url.Content("~/admin/contenido/listar/?idcategoria=")@idcategoria' ,
+            url: '@Url.Content("~/admin/contenido/listar/?idcategoria=")@idcategoria',
             paginable: true,
             filtrable: true,
-            limite: [20, 60, 100],      
+            limite: [20, 60, 100],
             columna: 'Titulo',
             columna_orden: 'DESC'
         });
 
         agrid.tabla().on('click', '.btn-eliminar', function () {
-            if (!confirm('¿Está seguro de eliminar este registro?'))
-            {
+            if (!confirm('¿Está seguro de eliminar este registro?')) {
                 return;
             }
 
@@ -70,6 +110,4 @@
             return false;
         })
     })
-
-  
 </script>   

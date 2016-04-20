@@ -12,7 +12,7 @@
     <title>@ViewBag.Title </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-
+    <link href="~/Areas/Admin/assets/css/Site.css" rel="stylesheet" />
     <link href="~/Areas/Admin/Assets/css/admin-style.css" rel="stylesheet" />
     <link href="~/Areas/Admin/Assets/css/bootstrap.theme.min.css" rel="stylesheet" />
 
@@ -36,7 +36,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-                        Cms Soluciones Instantáneas  V 1.0.0
+                        CMS Soluciones Instantáneas  V 1.0.0
                     </a>
                 </div>
 
@@ -44,15 +44,15 @@
 
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="nav navbar-nav">
-                        @{
+                        @*@{
                             var categorias = new Model.BussinesLogic.CategoriaLogic().ObtenerPor(-1).OrderBy(x => x.Orden);
                             foreach (var e in categorias)
                             {
                                 <li>
-                                    <a href="~/admin/contenido/index/?idcategoria=@e.idCategoria&idcontenido=0">@e.Titulo</a>
+                                    <a href="~/admin/contenido/index/?idcategoria=@e.idCategoria&idcontenido=0" id="titulo">@e.Titulo</a>
                                 </li>
                             }
-                        }
+                        }*@
                         @*<li>
                                  <a href="~/admin/Categoria?Tipo=1">Inicio</a>
                              </li>
@@ -78,7 +78,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="~/" target="_blank">Ver Página</a>
+                                    <a href="~/">Ver Página</a>
                                 </li>
                                 <li>
                                     <a href="~/admin/empresa/edit?id=1" target="_blank">Empresa</a>

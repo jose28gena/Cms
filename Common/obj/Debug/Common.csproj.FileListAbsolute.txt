@@ -23,5 +23,8 @@ C:\Users\JoseGenaro\Desktop\Cms\Common\bin\Debug\Common.pdb
 C:\Users\JoseGenaro\Desktop\Cms\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\JoseGenaro\Desktop\Cms\Common\obj\Debug\Common.dll
 C:\Users\JoseGenaro\Desktop\Cms\Common\obj\Debug\Common.pdb
-C:\Users\JoseGenaro\Desktop\Cms\Common\bin\Debug\Common.dll.CodeAnalysisLog.xml
-C:\Users\JoseGenaro\Desktop\Cms\Common\bin\Debug\Common.dll.lastcodeanalysissucceeded
+C:\Users\Soluciones\Source\Repos\Cms\Common\bin\Debug\Common.dll
+C:\Users\Soluciones\Source\Repos\Cms\Common\bin\Debug\Common.pdb
+C:\Users\Soluciones\Source\Repos\Cms\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Soluciones\Source\Repos\Cms\Common\obj\Debug\Common.dll
+C:\Users\Soluciones\Source\Repos\Cms\Common\obj\Debug\Common.pdb

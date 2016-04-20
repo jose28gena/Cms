@@ -21,8 +21,6 @@ namespace Cms.Areas.Admin.Controllers
             ViewBag.idcontenido = idcontenido;
             ViewBag.idcategoria = idcategoria;
            ViewBag.Title = CategoriaLogic.Obtener(idcategoria).Titulo;
-        
-     
             return View();
         }
 
@@ -30,7 +28,7 @@ namespace Cms.Areas.Admin.Controllers
         {
             //return Json(contenido.Listar(grid, SessionHelper.GetUser()));
           return Json(contenidologic.Listar(grid, idcategoria
-              ), grid.limite.ToString());
+              ));
         }
 
 
@@ -71,7 +69,6 @@ namespace Cms.Areas.Admin.Controllers
                 contenido.idContenido = idcontenido;
            
                     }
-
             else {
               
                 contenido = contenidologic.Obtener(idcontenido);

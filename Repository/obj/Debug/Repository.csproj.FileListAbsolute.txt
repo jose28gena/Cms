@@ -34,5 +34,12 @@ C:\Users\JoseGenaro\Desktop\Cms\Repository\bin\Debug\EntityFramework.SqlServer.x
 C:\Users\JoseGenaro\Desktop\Cms\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
 C:\Users\JoseGenaro\Desktop\Cms\Repository\obj\Debug\Repository.dll
 C:\Users\JoseGenaro\Desktop\Cms\Repository\obj\Debug\Repository.pdb
-C:\Users\JoseGenaro\Desktop\Cms\Repository\bin\Debug\Repository.dll.CodeAnalysisLog.xml
-C:\Users\JoseGenaro\Desktop\Cms\Repository\bin\Debug\Repository.dll.lastcodeanalysissucceeded
+C:\Users\Soluciones\Source\Repos\Cms\Repository\bin\Debug\Repository.dll
+C:\Users\Soluciones\Source\Repos\Cms\Repository\bin\Debug\Repository.pdb
+C:\Users\Soluciones\Source\Repos\Cms\Repository\bin\Debug\EntityFramework.dll
+C:\Users\Soluciones\Source\Repos\Cms\Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Soluciones\Source\Repos\Cms\Repository\bin\Debug\EntityFramework.xml
+C:\Users\Soluciones\Source\Repos\Cms\Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Soluciones\Source\Repos\Cms\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+C:\Users\Soluciones\Source\Repos\Cms\Repository\obj\Debug\Repository.dll
+C:\Users\Soluciones\Source\Repos\Cms\Repository\obj\Debug\Repository.pdb
