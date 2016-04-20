@@ -235,7 +235,7 @@ FakesAssemblies/
 _Pvt_Extensions
 
 # LightSwitch generated files
-GeneratedArtifacts/
+.paket/paket.exe
 ModelManifest.xml
 
 # Paket dependency manager
@@ -244,5 +244,17 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 
-# Webconfig
-.web.config
+# Raiz
+*.config
+*.dll
+*.pdb
+*.suo
+FakesAssemblies/
+.suo
+
+bin/
+*.dll
+*.pdb
+obj/Debug
+*.dll
+*.pdb
